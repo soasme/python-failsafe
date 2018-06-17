@@ -1,0 +1,11 @@
+[tool.poetry]
+name = "failsafe"
+version = "0.1.0"
+description = ""
+authors = ["Ju Lin <ju.lin@workday.com>"]
+
+[tool.poetry.dependencies]
+python = "*"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"

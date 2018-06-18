@@ -57,12 +57,24 @@ def failsafe(retry=None,
 if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG)
 
+    # todo: apply context,.use default context if not set.
+
     # todo: add jitter, backoff, duration, hooks (abort), based on return value, async.
     @failsafe(retry={'max_tries': 3, 'delay': 1, 'errors': (ValueError, ), })
     def get_remote_data():
         sleep(2.0)
         raise ValueError('demo')
         return 1
+
+    @failsafe(fallback={'value': None, })
+    def get_remote_data():
+        sleep(2.0)
+        raise ValueError('demo')
+
+    # todo: support '3-5', 'last 3 out of 5', (3, 5), 3 for failure and test.
+    # todo: async
+    # todo: on_failure, on_test
+    @failsafe(breaker={'failure': 3, 'delay': 1, 'test': 3, 'timeout': 1.0})
 
     #print(get_remote_data())
     print(get_remote_data.failsafe())

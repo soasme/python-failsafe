@@ -4,8 +4,8 @@ Python-Failsafe
 Overview
 --------
 
-> [Fail-safe](https://en.wikipedia.org/wiki/Fail-safe) in engineering is a design feature or practice that in the event of a specific type of failure, inherently responds in a way that will cause no or minimal harm to other equipment, the environment or to people.
-> - Wikipedia
+| `Fail-safe <https://en.wikipedia.org/wiki/Fail-safe>`_ in engineering is a design feature or practice that in the event of a specific type of failure, inherently responds in a way that will cause no or minimal harm to other equipment, the environment or to people.
+| - Wikipedia
 
 In software engineering, failsafe can keep your system away from cascading failure, infinite hanging, etc. Some of the most useful methods have been exploited, such as retrying, jitter, back-off, circuit breaker, fallback etc. A robust system has to apply any one of these techniques or to mix all of them to against failures.
 
